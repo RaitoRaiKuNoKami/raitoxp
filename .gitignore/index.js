@@ -2,11 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require('fs');
 let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
-
-bot.on('ready', function() {
-    bot.user.SetGame("Commande R.help");
-    
-}); 
+ 
 
  bot.login("NDIzNDc2OTIyNjE4NjA5Njc0.DYq5KA.Jwta1n_LSUS1o7zsy_LIz0vF0pg")
 
@@ -26,7 +22,7 @@ if (msg.content.startsWith(prefix + "help")) {
 }
 
 let userData = XP[msg.author.id];
-if (!userData) userData = {XP: 0, level: 0};
+if (!userData) userData = {XP: 10, level: 1};
 
 let curLevel = Math.floor(0.1 * Math.sqrt(userXP));
 if (curLevel > userData.level) {
