@@ -5,10 +5,10 @@ let XP = JSON.parse(fs.readFileSync('./XP.json', 'utf8'));
 
 bot.on('ready', function() {
     bot.user.SetGame("Commande R.help");
-    console.log ("Connectedç");
+    
 }); 
 
- bot.login(process.env.TOKEN)
+ bot.login("NDIzNDc2OTIyNjE4NjA5Njc0.DYq5KA.Jwta1n_LSUS1o7zsy_LIz0vF0pg")
 
 
 bot.on("message", msg => {
